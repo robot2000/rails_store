@@ -20,9 +20,10 @@ class Product < ActiveRecord::Base
 
 
   def change_valuta sym
-    valuta = {:USD => 1, :MXN => 15.4, :ARS => 8.78, :UAH => 22.5, :EUR => 0.94} # MXN-Mexican Peso, ARS-Argentine Peso
+    valuta = {:USD => 1, :MXN => 15.4, :ARS => 8.8, :UAH => 22.5, :EUR => 0.9} # MXN-Mexican Peso, ARS-Argentine Peso
     self.price = price
     price = (self.price / valuta[self.currency] * valuta[:sym])
+    p "price"
     self.save
   end
 end

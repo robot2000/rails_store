@@ -1,5 +1,35 @@
 <h1>New Product</h1>
 
+<%= form_for :product, url: products_path do |el| %>
+<p>
+  <%= el.label :name %><br>
+  <%= el.text_field :name %>
+</p>
+
+<p>
+  <%= el.label :description %><br>
+  <%= el.text_field :description %>
+</p>
+
+<p>
+  <%= el.label :price %><br>
+  <%= el.text_field :price %>
+</p>
+
+<p>
+  <%= el.label :currency %><br>
+  <%= el.text_field :currency %>
+</p>
+
+<p>
+  <%= el.submit %>
+</p>
+
+<% end %>
+
+
+
+
 <%= render 'form' %>
 
 <%= link_to 'Back', products_path %>
