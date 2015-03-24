@@ -13,17 +13,7 @@ RSpec.describe Product, type: :model do
     
     product2.save
     expect(described_class.count).to eq(2)
+    
   end
 
-  it "find first product" do
-    expect(described_class.first).to eq(nil)
-    product2.save
-    expect(described_class.first).to eq(product2)
-  end
-
-  it "find by name" do
-    expect(described_class.find_by name: 'book20').to eq(nil)
-    product2.save
-    expect(described_class.find_by name: 'book11').to eq(product2)
-  end
 end

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :products
+
+  resources :users
+
+  # match '/eduard' => 'users#index'
+
+  # match '/eduard', :controller => :users, :action => :index
+
+  #################################################################################
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
