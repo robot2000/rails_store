@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   # match '/eduard', :controller => :users, :action => :index
 
 ###################################################################################
-  get 'products/index'
   root 'products#index'
 
 ########################################################################

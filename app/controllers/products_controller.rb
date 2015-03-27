@@ -10,9 +10,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-##############################################################################
-    @product = Product.find(params[:id])
-##############################################################################
   end
 
   # GET /products/new
@@ -71,7 +68,10 @@ class ProductsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    ###############################################################################
     def product_params
-      params[:product]
+      #params[:product]
+      params.require(:product).permit(:name, :description, :price, :currency)
     end
+    ##############################################################################
 end
